@@ -130,21 +130,89 @@ nav ul li a:hover {
     background-color: #555;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     header {
-        flex-wrap: wrap;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .logo img {
+        height: 150px;
+    }
+
+    nav {
+        margin-right: 0;
     }
 
     nav ul {
         flex-wrap: wrap;
-        gap: 10px;
+        justify-content: center;
     }
 
     .header-right {
         flex-wrap: wrap;
-        gap: 5px;
+        justify-content: center;
     }
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 120px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .search-bar input {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .logo img {
+        height: 100px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .header-right {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .search-bar input {
+        width: 80%;
+    }
+
+    .search-bar button {
+        width: 20%;
+    }
+}
+
 
 
 /*---------------------------------------Center--------------------------------------- */
@@ -188,38 +256,63 @@ body {
     padding: 0;
 }
 
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .slick-prev, .slick-next {
+        font-size: 20px; /* Giảm kích thước icon */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Images img {
+        height: 300px;
+    }
+
+    .slick-prev, .slick-next {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Images img {
+        height: 250px;
+    }
+
+    .slick-prev, .slick-next {
+        font-size: 16px;
+    }
+}
+
+
                                         /*----- List Phân Loại -----*/
-#menu {
+#menu{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 25px;
     margin: 30px;
-    display: flex; /* Đảm bảo menu chính hiển thị ngang */
+    display: inline-block;
+    display: flex;
+        ul{
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        } 
+        li{
+            list-style-type: none;
+            a{
+                color: black;
+                text-decoration: none;
+                padding: 10px 0;
+            }
+            a:hover{
+                text-decoration: underline;
+                transition: width 0.3s ease-in-out;
+                color: navy;
+            }
+        }
+    
 }
-
-#menu ul {
-    display: flex; /* Sắp xếp các mục ngang nhau */
-    gap: 30px; /* Tạo khoảng cách giữa các mục */
-    margin: 0;
-    padding: 0;
-}
-
-#menu li {
-    list-style-type: none;
-}
-
-#menu a {
-    color: black;
-    text-decoration: none;
-    padding: 10px 15px; /* Khoảng cách giữa các mục */
-}
-
-#menu a:hover {
-    text-decoration: underline;
-    transition: width 0.3s ease-in-out;
-    color: navy;
-}
-                                        
                                         /*----- List Sản Phẩm -----*/
 .product-container {
     display: flex;
@@ -284,7 +377,68 @@ body {
     display: flex;
     align-items: flex-start;
 }
-                          
+@media screen and (max-width: 1024px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px; /* Tạo khoảng cách với danh sách sản phẩm */
+    }
+
+    .products {
+        justify-content: center;
+    }
+
+    .product {
+        width: 300px;
+        height: 500px;
+    }
+
+    .product-info {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .products {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .product {
+        width: 250px;
+        height: 450px;
+        margin: 10px;
+    }
+
+    .product-info {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        display: none; /* Ẩn sidebar trên màn hình nhỏ */
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        height: auto;
+    }
+
+    .product-info {
+        width: 90%;
+        padding: 20px;
+    }
+}
 
 
 
