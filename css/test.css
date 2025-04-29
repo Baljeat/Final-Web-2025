@@ -1,0 +1,397 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+/*---------------------------------------Header--------------------------------------- */
+
+header {
+    height: 140px;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 5px solid black;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.logo img {
+    /* flex-wrap: wrap; */
+    height: 200px;
+    width: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+nav {
+    margin-top: auto;
+    margin-right: 20px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    font-size: 20px;
+    position: relative;
+    margin-right: 20px;
+    font-weight: bold;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgb(16, 136, 176);
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content li a {
+    padding: 10px 15px;
+    white-space: nowrap;
+    color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+.login-btn, .cart-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+}
+
+.login-btn:hover, .cart-btn:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .header-right {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
+
+
+/*---------------------------------------Center--------------------------------------- */
+
+                            /*-----------Slider----------- */
+.Images{
+    margin: 0;
+    padding: 0;
+    img{
+    width: 1540px;
+    height: 400px;
+    }
+}
+
+.slick-prev, .slick-next {
+    background: none; /* Loại bỏ nền */
+    border: none; /* Loại bỏ viền */
+    font-size: 24px; /* Kích thước icon */
+    color: #333; /* Màu sắc icon */
+    position: absolute; /* Đảm bảo nút cố định vị trí */
+    top: 50%; /* Đặt nút tại giữa chiều cao */
+    transform: translateY(-50%); /* Căn giữa nút */
+    z-index: 10; /* Đảm bảo nút nằm trên slider */
+}
+
+.slick-prev {
+    left: 10px; /* Vị trí nút bên trái */
+}
+
+.slick-next {
+    right: 10px; /* Vị trí nút bên phải */
+}
+
+.slick-prev:hover, .slick-next:hover {
+    color: #d9ea1a; /* Đổi màu khi hover */
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+                                        /*----- List Phân Loại -----*/
+#menu {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 30px;
+    display: flex; /* Đảm bảo menu chính hiển thị ngang */
+}
+
+#menu ul {
+    display: flex; /* Sắp xếp các mục ngang nhau */
+    gap: 30px; /* Tạo khoảng cách giữa các mục */
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    list-style-type: none;
+}
+
+#menu a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px; /* Khoảng cách giữa các mục */
+}
+
+#menu a:hover {
+    text-decoration: underline;
+    transition: width 0.3s ease-in-out;
+    color: navy;
+}
+                                        
+                                        /*----- List Sản Phẩm -----*/
+.product-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar {
+    width: 250px; /* Điều chỉnh độ rộng danh mục phân loại */
+    flex-shrink: 0; /* Đảm bảo sidebar không bị thu nhỏ */
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Khoảng cách giữa các sản phẩm */
+}
+
+.product {
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    width: 350px;
+    height: 550px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    margin: 20px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.product-info {
+    width: 350px;
+    height: 100px;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.product-info:hover {
+    text-decoration: underline;
+}
+                                        
+                                        
+#content {
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 10px; /* Giảm khoảng cách với danh mục */
+    margin-right: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+                          
+
+
+
+
+
+/*---------------------------------------FOOTER--------------------------------------- */
+
+.footer a {
+    color: #ffffff;
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: black;
+}
+
+.footer {
+    height: 400px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('../img/Layout/Group\ Footer-1.png'); /* Đường dẫn hình nền */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 20px 0;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 1.5%;
+}
+.footer-logo {
+    flex: 0 0 150px; /* Cố định chiều rộng cho logo */
+    margin-left: 0;
+}
+
+.footer-logo img {
+    height: 200px;
+    width: auto;
+    display: block;
+}
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-section h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+}
+
+/* Đáp ứng cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
