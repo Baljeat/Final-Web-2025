@@ -70,6 +70,12 @@ nav ul li a:hover {
     min-width: 200px;
     z-index: 1000;
 }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ .dropdown.active .dropdown-content {
+    display: block;
+}
 
 .dropdown-content li {
     margin: 0;
@@ -81,9 +87,6 @@ nav ul li a:hover {
     color: #333;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 .header-right {
     display: flex;
@@ -187,11 +190,13 @@ nav ul li a:hover {
     }
 
     .logo img {
-        height: 100px;
+        height: 80px;
+        width: auto;
     }
 
     nav ul {
         flex-direction: column;
+        align-items: center;
         gap: 5px;
     }
 
@@ -201,17 +206,71 @@ nav ul li a:hover {
     }
 
     .search-bar {
-        width: 100%;
+        width: 90%;
+        display: flex;
     }
-
     .search-bar input {
-        width: 80%;
+        flex: 1;
     }
-
     .search-bar button {
-        width: 20%;
+        width: auto;
     }
 }
+/*----------------------------- thanh 3 sọc */
+/* Mặc định ẩn nút menu hamburger */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mặc định ẩn nút hamburger */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Khi màn hình nhỏ, hiển thị nút hamburger */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 28px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 9999; /* Đảm bảo nút không bị che */
+    }
+
+    /* Đảm bảo menu mặc định bị ẩn đi */
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        z-index: 1000;
+    }
+
+    /* Khi menu được mở bằng nút hamburger */
+    nav.active {
+        display: flex !important;
+    }
+}
+
+
+
 
 
 
@@ -222,10 +281,18 @@ nav ul li a:hover {
     margin: 0;
     padding: 0;
     img{
-    width: 1540px;
-    height: 400px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
+
+.slider img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
 
 .slick-prev, .slick-next {
     background: none; /* Loại bỏ nền */
@@ -405,13 +472,12 @@ body {
 @media screen and (max-width: 768px) {
     .products {
         flex-wrap: wrap;
-        gap: 20px;
+        justify-content: center;
     }
 
     .product {
         width: 250px;
-        height: 450px;
-        margin: 10px;
+        height: auto;
     }
 
     .product-info {
@@ -547,5 +613,17 @@ body {
     }
     .social-icons {
         justify-content: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .footer {
+        height: auto;
+        padding: 10px 0;
     }
 }
