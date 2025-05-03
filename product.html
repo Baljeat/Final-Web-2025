@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="css/khung.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <h1>Astrox 100ZZ - Bộ sưu tập ảnh</h1>
+
+    <!-- Slider ảnh -->
+    <div class="slider">
+        <img id="slide-img" src="img/Yonex/Racquet/100zz-1.png">
+        <button class="btn-slider" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn-slider" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Danh sách ảnh với Lightbox -->
+    <div class="gallery">
+        <img src="img/Yonex/Racquet/100zz-1.png" onclick="openLightbox('img/Yonex/Racquet/100zz-1.png')">
+        <img src="img/Yonex/Racquet/100zz-2.png" onclick="openLightbox('img/Yonex/Racquet/100zz-2.png')">
+        <img src="img/Yonex/Racquet/100zz-3.png" onclick="openLightbox('img/Yonex/Racquet/100zz-3.png')">
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -563,6 +563,7 @@ body {
 
 /* Căn chỉnh container của footer */
 .footer-container {
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Căn giữa nội dung */
