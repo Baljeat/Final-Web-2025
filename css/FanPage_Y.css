@@ -52,7 +52,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: black;
     padding: 10px 15px;
     display: block;
 }
@@ -70,6 +70,10 @@ nav ul li a:hover {
     min-width: 200px;
     z-index: 1000;
 }
+.dropdown-content a:hover{
+    background-color: #2871d6;
+    color: #fff;
+}
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -84,7 +88,7 @@ nav ul li a:hover {
 .dropdown-content li a {
     padding: 10px 15px;
     white-space: nowrap;
-    color: #333;
+    color: black;
 }
 
 
@@ -295,8 +299,8 @@ nav ul li a:hover {
 
 
 .slick-prev, .slick-next {
-    background: none; /* Loại bỏ nền */
-    border: none; /* Loại bỏ viền */
+    background: none; 
+    border: none; 
     font-size: 24px; /* Kích thước icon */
     color: #333; /* Màu sắc icon */
     position: absolute; /* Đảm bảo nút cố định vị trí */
@@ -306,15 +310,15 @@ nav ul li a:hover {
 }
 
 .slick-prev {
-    left: 10px; /* Vị trí nút bên trái */
+    left: 10px; 
 }
 
 .slick-next {
-    right: 10px; /* Vị trí nút bên phải */
+    right: 10px; 
 }
 
 .slick-prev:hover, .slick-next:hover {
-    color: #d9ea1a; /* Đổi màu khi hover */
+    color: #d9ea1a; 
 }
 
 body {
@@ -323,10 +327,10 @@ body {
     padding: 0;
 }
 
-/* Responsive adjustments */
+
 @media screen and (max-width: 1024px) {
     .slick-prev, .slick-next {
-        font-size: 20px; /* Giảm kích thước icon */
+        font-size: 20px; /
     }
 }
 
@@ -350,52 +354,73 @@ body {
     }
 }
 
+                                        /*----- List Sản Phẩm -----*/
 
-                                        /*----- List Phân Loại -----*/
-#menu{
+
+.sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.sidebar ul {
+    display: flex;
+    gap: 40px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    font-size: 25px;
-    margin: 30px;
-    display: inline-block;
-    display: flex;
-        ul{
-            display: flex;
-            gap: 30px;
-            margin: 0;
-            padding: 0;
-        } 
-        li{
-            list-style-type: none;
-            a{
-                color: black;
-                text-decoration: none;
-                padding: 10px 0;
-            }
-            a:hover{
-                text-decoration: underline;
-                transition: width 0.3s ease-in-out;
-                color: navy;
-            }
-        }
-    
+    font-size: 30px;
 }
-                                        /*----- List Sản Phẩm -----*/
+
+.sidebar ul li a {
+    text-decoration: none; 
+    color: black;
+}
+
+.sidebar ul li a:hover {
+    color: navy; 
+    text-decoration: underline; 
+}
+@media screen and (max-width: 768px) {
+    .sidebar ul {
+        flex-wrap: wrap; /* Cho phép các mục xuống dòng */
+        justify-content: center; 
+        gap: 20px;
+    }
+
+    .sidebar ul li {
+        width: 100%; 
+        text-align: center; 
+    }
+}
+/* .product-info {
+    width: 350px;
+    height: 100px;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+} */
+
 .product-container {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
 }
 
-.sidebar {
-    width: 250px; /* Điều chỉnh độ rộng danh mục phân loại */
-    flex-shrink: 0; /* Đảm bảo sidebar không bị thu nhỏ */
-}
 
 .products {
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px; /* Khoảng cách giữa các sản phẩm */
+    gap: 30px; 
 }
 
 .product {
@@ -418,28 +443,28 @@ body {
 
 .product img {
     width: 100%;
-    height: 70%;
+    height: 385px; 
     object-fit: cover;
 }
 
 .product-info {
-    width: 350px;
-    height: 100px;
-    padding: 30px;
+    width: 100%;
+    padding: 15px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     color: black;
+    font-weight: bold; 
+    font-size: 20px; 
 }
 
 .product-info:hover {
     text-decoration: underline;
 }
-                                        
-                                        
+                                                                           
 #content {
     background-color: white;
     margin-top: 20px;
-    margin-left: 10px; /* Giảm khoảng cách với danh mục */
+    margin-left: 10px; 
     margin-right: 20px;
     display: flex;
     align-items: flex-start;
@@ -452,7 +477,7 @@ body {
 
     .sidebar {
         width: 100%;
-        margin-bottom: 20px; /* Tạo khoảng cách với danh sách sản phẩm */
+        margin-bottom: 20px; 
     }
 
     .products {
@@ -470,41 +495,56 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .products {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .product {
         width: 250px;
-        height: auto;
+        height: 393px; 
+    }
+    
+    .product img {
+        height: 275px; 
     }
 
     .product-info {
+        font-size: 18px;
         width: 250px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .sidebar {
-        display: none; /* Ẩn sidebar trên màn hình nhỏ */
-    }
+
+.sidebar{
+    display: block;
+}
 
     .products {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 
     .product {
-        width: 90%;
+        width: calc(100% - 40px);
+        max-width: 320px;
         height: auto;
+        aspect-ratio: 3/4;
+        margin: 10px;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .product-info {
-        width: 90%;
-        padding: 20px;
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
     }
 }
+
 
 
 
@@ -512,118 +552,162 @@ body {
 
 /*---------------------------------------FOOTER--------------------------------------- */
 
-.footer a {
-    color: #ffffff;
-    display: block;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: black;
-}
-
 .footer {
-    height: 400px;
+    background-color: #051d3e;
+    min-height: 300px; 
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
-    background-image: url('../img/Layout/Group\ Footer-1.png'); /* Đường dẫn hình nền */
-    background-size: cover;
-    background-position: center;
     color: #ffffff;
-    padding: 20px 0;
-    
+    padding: 20px 0; 
 }
 
+/* Căn chỉnh container của footer */
 .footer-container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 0 1.5%;
+    justify-content: center; /* Căn giữa nội dung */
+    align-items: flex-start; /* Đẩy nội dung lên gần logo */
+    gap: 20px;
+    padding: 20px 5%;
 }
+
+
 .footer-logo {
-    flex: 0 0 150px; /* Cố định chiều rộng cho logo */
-    margin-left: 0;
+    flex: 0 0 200px; 
+    text-align: center;
 }
 
 .footer-logo img {
-    height: 200px;
     width: auto;
+    max-width: 200px; /* Giữ kích thước giống header */
+    height: auto;
     display: block;
 }
+
+/* Căn chỉnh phần nội dung footer */
 .footer-section {
     flex: 1;
-    min-width: 200px;
-    margin: 10px 0;
+    min-width: 220px;
+    margin: 5px 0;
 }
 
+/* Tiêu đề của footer */
 .footer-section h3 {
     font-weight: bold;
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    border-bottom: 2px solid #ffffff;
-    display: inline-block;
+    font-size: 20px;
+    border-bottom: 2px solid #ffffff; 
+    display: inline-block; 
     padding-bottom: 5px;
 }
 
+/* Danh sách nội dung */
 .footer-section ul {
     list-style: none;
     padding: 0;
 }
 
 .footer-section li {
-    margin: 8px 0;
-    line-height: 1.6;
+    margin: 6px 0;
+    line-height: 1.5;
 }
 
+.footer-section li a {
+    color: #ffffff;
+    text-decoration: none; 
+}
+.footer-section li a:hover{
+    color: lightblue;
+    text-decoration: underline;
+}
+
+/* Biểu tượng mạng xã hội */
 .social-icons {
     display: flex;
     gap: 10px;
     margin-top: 10px;
 }
 
+.social-icons a{
+    color: black;
+}
+
+.social-icons a:hover{
+    color: lightblue;
+}
+.social-icons a:active{
+    color: lightblue;
+}
+
 .social-icons img {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s;
+    width: 70px;
+    height: 70px;
 }
 
-.social-icons img:hover {
-    transform: scale(1.2);
-}
-
+/* Footer bottom */
 .footer-bottom {
+    font-weight: bold;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
     padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+}
+.footer-bottom p {
+    font-size: 20px;
 }
 
-/* Đáp ứng cho màn hình nhỏ hơn */
-@media (max-width: 768px) {
+/* Điều chỉnh trên mobile */
+@media screen and (max-width: 768px) {
     .footer-container {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        text-align: center;
         align-items: center;
     }
-    .footer-section {
+
+     .footer-section {
         text-align: center;
+    } 
+
+    .footer-logo {
+        grid-column: span 2; 
+        flex: 0 0 auto;
     }
-    .social-icons {
-        justify-content: center;
+
+    .footer-logo img {
+        max-width: 180px; /* Giữ kích thước hợp lý */
+        margin-bottom: 5px; 
+    }
+
+    .footer {
+        min-height: auto; /* Footer tự động điều chỉnh */
+        padding-bottom: 40px;
+    }
+    .footer-bottom p {
+        font-size: 15px;
     }
 }
-@media screen and (max-width: 480px) {
-    .social-icons img {
-        width: 40px;
-        height: 40px;
-    }
-}
+
 @media screen and (max-width: 480px) {
     .footer {
         height: auto;
         padding: 10px 0;
     }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo img {
+        max-width: 160px; /* Nhỏ hơn để hiển thị hợp lý */
+    }
+
+    .social-icons img {
+        width: 50px; /* Nhỏ hơn trên màn hình nhỏ */
+        height: 50px;
+    }
+
 }
+
+

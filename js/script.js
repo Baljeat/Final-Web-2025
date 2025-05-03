@@ -3,9 +3,11 @@ $(document).ready(function(){
       infinite:true,
       autoplay:true,
       autoplaySpeed:200,
-      speed:2000,
-      fade: true,
+      speed:1000,
+      //fade: true,
       arrows:true,
+      draggable: true, // Cho phép kéo chuột
+      swipe: true, // Cho phép vuốt trên thiết bị cảm ứng
       prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-angle-left' aria-hidden='true'></i></button>",
       nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
   
