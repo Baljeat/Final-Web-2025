@@ -59,38 +59,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-//----------------------- hiển thị sản phẩm
-// Chuyển hướng đến trang sản phẩm
-function loadProduct(productId) {
-    window.location.href = `product.html?product=${productId}`;
+// script.js
+function changeImage(imageSrc) {
+    let mainImage = document.getElementById('mainImage');
+    mainImage.src = imageSrc;
+    mainImage.width = 550;
+    mainImage.height = 750;
 }
+document.getElementById('mainImage').addEventListener('click', function() {
+    openLightbox(this.src);
+});
 
-// Lightbox (Xem ảnh lớn)
 function openLightbox(imageSrc) {
-    document.getElementById("lightbox-img").src = imageSrc;
-    document.getElementById("lightbox").style.display = "flex";
+    let lightbox = document.getElementById('lightbox');
+    document.getElementById('lightboxImage').src = imageSrc;
+    lightbox.classList.add("active");
 }
 
 function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-
-let img = [
-    "img/Yonex/Racquet/100zz-1.png",
-    "img/Yonex/Racquet/100zz-2.png",
-    "img/Yonex/Racquet/100zz-3.png"
-];
-
-
-function nextSlide() {
-    index = (index + 1) % img.length;
-    document.getElementById("slide-img").src = img[index];
-    console.log("Ảnh hiện tại:", img[index]); // Kiểm tra URL
-}
-
-function prevSlide() {
-    index = (index - 1 + img.length) % img.length;
-    document.getElementById("slide-img").src = img[index];
-    console.log("Ảnh hiện tại:", img[index]); // Kiểm tra URL
+    document.getElementById('lightbox').classList.remove("active");
 }

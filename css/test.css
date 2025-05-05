@@ -639,10 +639,16 @@ body {
     color: lightblue;
 }
 
-.social-icons img {
-    width: 70px;
-    height: 70px;
+.social-icons a i {
+    font-size: 30px; /* Kích thước icon */
+    color: white; /* Giữ màu trắng */
+    transition: 0.3s ease-in-out;
 }
+
+.social-icons a:hover i {
+    color: lightblue; /* Hiệu ứng đổi màu khi hover */
+}
+
 
 /* Footer bottom */
 .footer-bottom {
@@ -659,56 +665,60 @@ body {
 /* Điều chỉnh trên mobile */
 @media screen and (max-width: 768px) {
     .footer-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 20px;
-        text-align: center;
+        display: flex;
+        flex-direction: column; /* Đảm bảo xuống dòng đúng */
         align-items: center;
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+
     }
 
-     .footer-section {
-        text-align: center;
+
+    .footer-section {
+        width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+        font-size: 15px;
     } 
 
-    .footer-logo {
-        grid-column: span 2; 
-        flex: 0 0 auto;
+    .footer-logo img, .footer-section img {
+        display: block; /* Bắt buộc ảnh xuống dòng */
+        margin: 20px auto; /* Căn giữa hoàn toàn */
+        width: 80%; /* Giảm tỷ lệ hợp lý */
+        max-width: 250px; /* Giới hạn kích thước tối ưu */
     }
 
-    .footer-logo img {
-        max-width: 180px; /* Giữ kích thước hợp lý */
-        margin-bottom: 5px; 
+    .footer-logo {
+        width: 100%;
+        text-align: center;
     }
 
     .footer {
-        min-height: auto; /* Footer tự động điều chỉnh */
+        min-height: auto;
         padding-bottom: 40px;
     }
+
     .footer-bottom p {
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .footer {
-        height: auto;
-        padding: 10px 0;
-    }
-
     .footer-container {
-        flex-direction: column;
+        flex-direction: column; /* Đảm bảo xuống dòng đúng */
         align-items: center;
     }
 
-    .footer-logo img {
-        max-width: 160px; /* Nhỏ hơn để hiển thị hợp lý */
+    .footer-logo img, .footer-section img {
+        width: 70%; /* Giảm tiếp trên mobile */
+        max-width: 200px; /* Giữ kích thước cân đối */
+        margin: 15px auto; /* Căn giữa */
     }
 
-    .social-icons img {
-        width: 50px; /* Nhỏ hơn trên màn hình nhỏ */
-        height: 50px;
+    .social-icons a i {
+        font-size: 18px; /* Điều chỉnh kích thước icon hợp lý */
     }
-
 }
+
 
 
