@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// script.js
+// Chuyển động slider trong chi tiết sản phẩm
 function changeImage(imageSrc) {
     let mainImage = document.getElementById('mainImage');
     mainImage.src = imageSrc;
@@ -79,3 +79,15 @@ function openLightbox(imageSrc) {
 function closeLightbox() {
     document.getElementById('lightbox').classList.remove("active");
 }
+
+//size giày
+const sizeButtons = document.querySelectorAll('.size-button');
+const selectedSizeText = document.querySelector('.selected-size');
+
+sizeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        sizeButtons.forEach(btn => btn.classList.remove('selected')); // Xóa highlight trước đó
+        button.classList.add('selected'); // Highlight size được chọn
+        selectedSizeText.textContent = `Bạn đã chọn size: ${button.textContent}`;
+    });
+});

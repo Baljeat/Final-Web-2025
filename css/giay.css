@@ -1,0 +1,322 @@
+/* styles.css */
+body1 {
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.container1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    padding: 0 40px;
+}
+
+/* Main Image nằm trên cùng */
+.main-image-container {
+    display: flex;
+    flex-direction: column; /* Đặt main image trên cùng, slider bên dưới */
+    /* align-items: center; */
+}
+
+/* Main Image */
+.main-image img {
+    width: 850px;
+    height: 600px;
+    object-fit: cover;
+    margin-bottom: 10px; /* Tạo khoảng cách với slider */
+}
+
+/* Slider & Thumbnail nằm dưới main image */
+.slider1 {
+    display: flex;
+    /* justify-content: flex-start; */
+    gap: 15px;
+}
+
+.thumbnail-images {
+    display: flex;
+    /* justify-content: flex-start ; */
+    gap: 10px;
+}
+
+.thumbnail-images img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    cursor: pointer;
+
+}
+
+/* Product nằm ngang với main image */
+.product-information {
+    flex: 1;
+    background-color: #d9d9d9;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 17px;
+    text-align: left;
+    max-width: 650px;
+    height: fit-content;
+
+}
+
+
+
+.align {
+    margin-left: 171px; /* Điều chỉnh khoảng cách */
+}
+.old-price {
+    text-decoration: line-through; /* Gạch ngang */
+    font-weight: bold;
+    font-size: 21px;
+    margin-right: 50px; /* Khoảng cách với giá mới */
+}
+
+.new-price {
+    color: red; /* Màu đỏ */
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.btn-cart {
+    background-color: rgb(206, 192, 192);
+    border: 1px solid black;
+    display: block;
+    text-align: center;
+    margin: 0 auto; /* Đẩy nút vào giữa */
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-cart:hover {
+    background-color: #d9d9d9;
+    color: red;
+}
+
+.selected-size {
+    margin:0;
+    font-weight: bold;
+}
+
+/* Các nút chọn size */
+.size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 400px; 
+    background:rgb(206, 192, 192) ; 
+    padding: 5px; 
+    border: 2px solid black; 
+    text-align: center;
+    border-radius: 10px;
+}
+
+.size-button {
+    width: 30px;
+    height: 30px;
+    background-color: #d9d9d9;
+    border: 1px solid black; /* Viền nút */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.size-button:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.quantity-container label {
+    font-weight: bold;
+}
+
+.quantity-container input {
+    width: 60px;
+    height: 20px;
+    font-size: 16px;
+    color: #fff;
+    background: red;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* -----------------------------------------------Điều chỉnh responsive -----------------------------------------------*/
+
+@media (max-width: 1024px) {
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .slider1 {
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .thumbnail-images {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .thumbnail-images img {
+        width: 90px;
+        height: 140px;
+    }
+
+    .main-image {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .main-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .product-information {
+        max-width: 80%;
+        height: auto;
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .btn-cart {
+        width: 80%;
+        font-size: 17px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Main image lên trên cùng */
+    .main-image {
+        order: -1; /* Ép main image lên trước */
+        text-align: center;
+        margin-bottom: 15px; 
+    }
+
+    .main-image img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    /* Slider và thumbnail xếp ngang phía dưới main image */
+    .slider1 {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .thumbnail-images {
+        display: flex;
+        flex-direction: row; 
+        gap: 10px;
+    }
+
+    .thumbnail-images img {
+        width: 60px;
+        height: 90px;
+    }
+
+    .product-information {
+        max-width: 90%;
+        font-size: 16px;
+        margin: auto;
+    }
+
+    .btn-cart {
+        width: 90%;
+        padding: 10px;
+    }
+    .size-options {
+        max-width: 90%; /* Giữ bố cục gọn trên mobile */
+        padding: 10px;
+    }
+
+    .size-button {
+        width: 40px; /* Điều chỉnh kích thước nút */
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .quantity-container input {
+        width: 80px;
+        height: 30px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-image img {
+        max-width: 250px; /* Thu nhỏ hơn khi ở mobile */
+    }
+
+    .slider1 {
+        transform: scale(0.8); /* Giảm tỷ lệ */
+    }
+
+    .thumbnail-images img {
+        width: 50px;
+        height: 75px;
+    }
+    .size-options {
+        gap: 5px; /* Giảm khoảng cách giữa các nút */
+    }
+
+    .size-button {
+        width: 35px; 
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .quantity-container {
+        margin-top: 25px; /* Giữ số lượng tách biệt hơn */
+    }
+
+    .quantity-container input {
+        width: 70px;
+        height: 28px;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
