@@ -92,3 +92,33 @@ sizeButtons.forEach(button => {
     });
 });
 
+
+//----------------
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#nav-mobile");
+    const overlay = document.querySelector(".overlay");
+
+    menuToggle.addEventListener("click", function() {
+        menu.classList.toggle("open");
+        overlay.classList.toggle("show");
+    });
+
+    overlay.addEventListener("click", function() {
+        menu.classList.remove("open");
+        overlay.classList.remove("show");
+    });
+
+    // Xử lý dropdown
+    document.querySelectorAll(".menu-collapse").forEach(dropdownToggle => {
+        dropdownToggle.addEventListener("click", function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            target.classList.toggle("show");
+        });
+    });
+});
+
+
+
+

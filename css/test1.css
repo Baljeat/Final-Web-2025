@@ -221,22 +221,22 @@ nav ul li a:hover {
     }
 }
 /*----------------------------- thanh 3 sọc */
-/* Mặc định ẩn nút menu hamburger */
-.menu-toggle {
+/* Nền đen mờ phủ toàn bộ màn hình */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Nền đen mờ */
     display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
+    z-index: 998; /* Đặt dưới menu */
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Mặc định ẩn nút hamburger */
+/* Ẩn nút hamburger trên màn hình lớn */
 .menu-toggle {
     display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
 }
 
 /* Khi màn hình nhỏ, hiển thị nút hamburger */
@@ -250,28 +250,88 @@ nav ul li a:hover {
         cursor: pointer;
         background: none;
         border: none;
-        z-index: 9999; /* Đảm bảo nút không bị che */
+        z-index: 9999;
     }
 
-    /* Đảm bảo menu mặc định bị ẩn đi */
-    nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #ffffff;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
+    /* Menu trượt từ bên phải */
+    .menu {
+        border-radius: 0 10px;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Mặc định ẩn */
+        width: 300px;
+        height: 100vh;
+        background-color: #051d3e;
+        box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.1);
         z-index: 1000;
+        transition: right 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 60px;
+        padding-left: 0; /* Đẩy nội dung sát vào rìa trái */
     }
 
-    /* Khi menu được mở bằng nút hamburger */
-    nav.active {
-        display: flex !important;
+    /* Khi menu được mở */
+    .menu.active {
+        right: 0;
+    }
+
+    /* Khi menu mở, hiển thị nền đen */
+    .overlay.active {
+        display: block;
+        opacity: 0.5;
+    }
+
+    /* Danh sách menu */
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu ul li {
+        padding: 15px 10px; /* Điều chỉnh khoảng cách */
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid #ccc; /* Đường gạch phân cách */
+        text-align: left; /* Căn trái nội dung */
+    }
+
+    /* Loại bỏ đường gạch cuối cùng */
+    .menu ul li:last-child {
+        border-bottom: none;
+    }
+
+    /* Dropdown menu */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
