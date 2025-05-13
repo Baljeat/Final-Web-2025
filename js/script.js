@@ -80,7 +80,7 @@ function closeLightbox() {
     document.getElementById('lightbox').classList.remove("active");
 }
 
-//size giày
+//-----------------------------Size giày-----------------------------
 const sizeButtons = document.querySelectorAll('.size-button');
 const selectedSizeText = document.querySelector('.selected-size');
 
@@ -93,7 +93,7 @@ sizeButtons.forEach(button => {
 });
 
 
-//----------------
+//-----------------------------Hamburger-----------------------------
 document.addEventListener("DOMContentLoaded", function() {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector("#nav-mobile");
@@ -118,7 +118,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
 
 
 

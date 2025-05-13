@@ -297,7 +297,6 @@ nav ul li a:hover {
         border-bottom: 1px solid #ccc; /* Đường gạch phân cách */
         text-align: left; /* Căn trái nội dung */
     }
-
     /* Loại bỏ đường gạch cuối cùng */
     .menu ul li:last-child {
         border-bottom: none;
