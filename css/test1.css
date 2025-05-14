@@ -223,23 +223,37 @@ nav ul li a:hover {
     }
 }
 /*----------------------------- thanh 3 sọc */
-/* Nền đen mờ phủ toàn bộ màn hình */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7); /* Nền đen mờ */
-    display: none;
-    z-index: 998; 
-    transition: opacity 0.3s ease-in-out;
-}
 
 /* Ẩn nút hamburger trên màn hình lớn */
 .menu-toggle {
     display: none;
 }
+/* Màu mặc định */
+.menu-toggle i {
+  color: black;
+}
+
+/* Khi menu mở */
+.menu-open .menu-toggle i {
+  color: white;
+}
+
+/* Menu có nền trắng */
+.menu-open .menu a {
+  color: white;
+}
+.menu-open .menu a:hover {
+  color: #2871d6;
+}
+.menu-open .menu .dropdown-content a {
+    background-color: gray;
+    color: black ;
+}
+.menu-open .menu .dropdown-content a:hover {
+    background-color: #2871d6;
+    color: #fff ;
+}
+
 
 /* Khi màn hình nhỏ, hiển thị nút hamburger */
 @media screen and (max-width: 768px) {
@@ -271,7 +285,6 @@ nav ul li a:hover {
         justify-content: flex-start;
         padding-top: 60px;
     }
-
     .menu.active {
         right: 0;
     }
