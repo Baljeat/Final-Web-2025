@@ -442,10 +442,129 @@ nav ul li a:hover {
     }
 }
 
+/* -------------------------------About Us------------------------------- */
+/* Tổng quan container */
+.container_About {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 35px;
+    padding: 20px;
+    background: #051d3e;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Cấu trúc các khung */
+.box {
+    padding: 20px;
+    background: #d9d9d9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Khung nội dung */
+.text-content {
+    width: 60%;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 5%;
+}
+
+/* Khung hình ảnh */
+.image-box {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box img {
+    width: 430px;
+    height: 920px;
+    border-radius: 8px;
+}
+
+/* Định dạng chữ */
+h1, h2 {
+    color: black;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Responsive trên tablet */
+@media screen and (max-width: 768px) {
+    .container_About {
+        flex-direction: column;
+        /* text-align: center; */
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .text-content, .image-box {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .image-box img {
+        min-height: 300px;
+        
+    }
+
+    h1 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    ul li {
+        font-size: 18px;
+    }
+}
+
+/* Responsive trên mobile */
+@media screen and (max-width: 480px) {
+    .container_About {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+
+    .image-box img {
+        max-height: 250px;
+    }
+}
 
 
 
-                                        /*----- List Sản Phẩm -----*/
+/*------------------------------- List Sản Phẩm -------------------------------*/
 
 
 .sidebar {
