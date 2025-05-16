@@ -293,6 +293,7 @@ nav ul li a:hover {
 }
 
 
+
 /* Khi màn hình nhỏ, hiển thị nút hamburger */
 @media screen and (max-width: 768px) {
     .menu-toggle {
@@ -311,7 +312,7 @@ nav ul li a:hover {
     .menu {
         position: fixed;
         top: 0;
-        right: -100%; 
+        right: -100%;
         width: 300px;
         height: 100vh;
         background-color: #051d3e;
@@ -335,15 +336,16 @@ nav ul li a:hover {
 
     /* Danh sách menu */
     .menu ul {
-        list-style: none;
         padding: 0;
         margin: 0;
+        list-style: none;
     }
 
     .menu ul li {
+        margin: 0;
         font-size: 18px;
         font-weight: bold;
-        border-bottom: 1px solid #ccc; 
+        border-bottom: 1px solid #ccc;
     }
     /* Loại bỏ đường gạch cuối cùng */
     .menu ul li:last-child {
@@ -504,10 +506,10 @@ ul li {
 }
 
 /* Responsive trên tablet */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
     .container_About {
         flex-direction: column;
-        /* text-align: center; */
+
         max-width: 90%;
         padding: 15px;
     }
@@ -520,7 +522,7 @@ ul li {
 
     .image-box img {
         min-height: 300px;
-        
+
     }
 
     h1 {
@@ -642,7 +644,7 @@ ul li {
     h3{
         color: #fff;
     }
-    
+
     a{
         color: #fff;
         text-decoration: none;
@@ -650,7 +652,7 @@ ul li {
     a:hover{
         color: black;
     }
-    
+
 }
 .product_Lab:hover{
     background-color: #ddd;
